@@ -1,0 +1,10 @@
+[Unit]
+Description=DroneApp Service
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python3 /home/pi/cloudapp-raspi/app.py --d /home/pi/cloudapp-raspi/
+
+[Install]
+WantedBy=multi-user.target

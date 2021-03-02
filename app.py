@@ -23,18 +23,7 @@ if len(config.read(CONFIGURATIONS)) == 0:
     sys.exit()  
 
 DRONE_ID = config['drone']['id']
-HOST_IP = config['cloud-app']['ip']
-VIDEO_PORT = int( config['cloud-app']['video-port'])
-
-GRAYSCALE = config['video']['grayscale'].lower() == 'true'
-FRAMES_PER_SECOND = int( config['video']['fps'])
-JPEG_QUALITY = int( config['video']['quality'])
-WIDTH = int( config['video']['width'])
-HEIGHT = int( config['video']['height'])
+HOST_IP = config['cloud-app']['ip'] 
 
 if __name__ == '__main__':
-    logging.debug('DroneApp has started! Directory %s', APP_DIR)
-
-    logging.info('FPS: %s  Quality: %s  Width %s Height %s  Grayscale: %s', 
-                 str(FRAMES_PER_SECOND), str(JPEG_QUALITY), str(WIDTH), str(HEIGHT), GRAYSCALE)
-    logging.info('Drone ID: %s  Video Recipient: %s:%s', str(DRONE_ID), str(HOST_IP), str(VIDEO_PORT))
+    logging.debug('DroneApp has started! Directory %s', APP_DIR) 

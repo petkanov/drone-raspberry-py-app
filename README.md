@@ -11,3 +11,5 @@ sudo apt install python3-opencv
 
 sudo pip3 install netifaces psutil google-api-python-client \
                   wiringpi dronekit opencv-python
+                  
+Create logs/ directory in the root app folder on Raspberry Pi (same place where app.py is located)
